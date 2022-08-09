@@ -1,0 +1,159 @@
+@import "./__variables.scss";
+@import "./__common_class.scss";
+@import "./__mixins.scss";
+
+#modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    .modal-container {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        max-width: 442px;
+        height: 532px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+        .exit-btn {
+            color: #3f4b53;
+            font-size: 1.4rem;
+            font-weight: 550;
+            border: none;
+            border-radius: 4px;
+            background-color: #fff;
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            padding: 8px 16px;
+            cursor: pointer;
+
+        }
+
+        .exit-btn:hover {
+            background-color: #f2f3f4;
+        }
+
+        .login-component {
+            padding: 24px;
+
+            #login-header {
+                color: #6f787e;
+                margin-top: 64px;
+
+                .login-header__title {
+                    color: #000;
+                    font-size: 2.4rem;
+                    font-weight: 600;
+                }
+
+                .login-header__label {
+                    margin: 16px 0;
+                    font-size: 1.4rem;
+                    font-weight: 400;
+                }
+            }
+
+            #login-content {
+                display: flex;
+                flex-direction: column;
+
+                .login-content__input {
+                    font-size: 1.4rem;
+                    font-weight: 400;
+                    padding: 16px;
+                    margin: 8px 0 16px 0;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                }
+
+                .login-content__button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.4rem;
+                    font-weight: 400;
+                    padding: 12px 16px;
+                    border: none;
+                    border-radius: 4px;
+                    background-color: #f2f3f4;
+                    color: #b7bbbf;
+                    cursor: not-allowed;
+
+                    svg {
+                        margin-left: 8px;
+
+                        path {
+                            fill: #b7bbbf;
+                        }
+                    }
+                }
+
+                .login-content__input:hover,
+                :focus {
+                    outline: 1px solid #0f62fe;
+                }
+
+                .login-content__input:not(:placeholder-shown)+.login-content__button {
+
+                    background-color: #d52220;
+                    color: #fff;
+                    cursor: pointer;
+
+                    svg {
+                        margin-left: 8px;
+
+                        path {
+                            fill: #fff;
+                        }
+                    }
+                }
+            }
+
+            #login-footer {
+                margin-top: 118px;
+
+                .login-footer__label {
+                    color: #6f787e;
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                    margin: 12px 0;
+                }
+
+                .login-footer__network {
+                    .google {
+                        margin-left: 16px;
+
+                        svg {
+                            border-radius: 100%;
+                            box-shadow: 0 -2px 8px 0 rgb(0 0 0 / 10%), 0 4px 8px 0 rgb(0 0 0 / 10%);
+                        }
+                    }
+                }
+
+                .login-footer__alert {
+                    display: block;
+                    color: #6f787e;
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                    margin: 16px 0;
+
+                    a {
+                        font-size: 1.2rem;
+                        color: #0f62fe;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}

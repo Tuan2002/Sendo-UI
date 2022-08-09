@@ -1,0 +1,87 @@
+@import "./__variables.scss";
+@import "./__common_class.scss";
+@import "./__mixins.scss";
+// Modules
+@import "./login_modal.scss";
+@import "./header.scss";
+@import "./content.scss";
+@import "./footer.scss";
+
+// SCSS Reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $primaryFont, sans-serif;
+    font-size: 10px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#app {
+    #chat-btn {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        z-index: 9;
+        background-color: #3f81fe;
+        width: 94px;
+        height: 40px;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 2px 4px 0 rgb(0 0 0 / 12%), 0 -2px 2px 0 rgb(0 0 0 / 4%);
+        cursor: pointer;
+
+        .chat-btn__content {
+            display: flex;
+            align-items: center;
+
+            path {
+                fill: #fff;
+            }
+
+            span {
+                margin-left: 8px;
+                font-weight: 600;
+                font-size: 1.4rem;
+                color: #fff;
+            }
+        }
+    }
+
+    #scroll-top-btn {
+        position: fixed;
+        bottom: 90px;
+        right: 50px;
+        z-index: 9;
+        background-color: #fff;
+        width: 40px;
+        height: 40px;
+        border-radius: 4px;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 1px 3px 0px rgb(0 0 0 / 20%);
+        cursor: pointer;
+
+        .scroll-top-btn__content {
+            display: flex;
+            align-items: center;
+
+            path {
+                fill: #fff;
+            }
+
+            span {
+                margin-left: 8px;
+                font-weight: 600;
+                font-size: 1.4rem;
+                color: #fff;
+            }
+        }
+    }
+}

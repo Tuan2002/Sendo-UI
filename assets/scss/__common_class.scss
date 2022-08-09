@@ -1,0 +1,74 @@
+.header-width,
+.footer-width {
+    max-width: 1356px;
+    padding: 0 24px;
+    margin: 0 auto;
+}
+
+.content-width {
+    max-width: 1324px;
+    padding: 0 24px;
+    margin: 0 auto;
+}
+
+.deal-type--daily-deal {
+    width: 82px;
+    border-radius: 4px;
+    margin-right: 4px;
+}
+
+.deal-type--free-ship {
+    width: 62px;
+    border-radius: 4px;
+    margin-right: 4px;
+}
+
+.is-video {
+    .play-video {
+        display: block !important;
+    }
+}
+
+.is-ad {
+    width: 100%;
+    background-image: url(https://media3.scdn.vn/img4/2022/08_03/xReJ8m6wcHgkQlyNclIE.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .product__item__content {
+        display: none;
+    }
+}
+
+.is-daily-deal {
+
+    background-image: linear-gradient(to bottom, #ffffff 14%, #fbdcc5);
+
+    .item__banner {
+        display: block !important;
+    }
+
+    .product__item__content {
+        padding-bottom: 8px;
+        width: 186px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px 0 rgb(0 0 0 / 12%), 0 -2px 2px 0 rgb(0 0 0 / 4%);
+        margin-bottom: 16px;
+        margin: 16px auto;
+
+        .product__item__product-info {
+            .product-info__price {
+                color: #ee2624 !important;
+            }
+        }
+    }
+
+    .product__item__seller-info,
+    .product__item--deal-type,
+    .product-info__name {
+        display: none !important;
+    }
+
+}

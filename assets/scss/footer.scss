@@ -1,0 +1,107 @@
+@import "./__variables.scss";
+@import "./__common_class.scss";
+@import "./__mixins.scss";
+
+#footer {
+
+    .first-footer,
+    .third-footer {
+        background-color: #f2f3f4;
+        padding: 20px 0;
+
+        .first-footer__content {
+            display: flex;
+
+            .first-footer__content__item {
+                flex-basis: 25%;
+                list-style: none;
+
+                .content__item__title {
+                    font-size: 1.3rem;
+                    font-weight: 600;
+                    color: #3f4b53;
+                    margin-bottom: 16px;
+                }
+
+                .content__item__type {
+                    font-size: 1.2rem;
+                    color: #3f4b53;
+                    margin-bottom: 8px;
+                    cursor: pointer;
+                }
+
+                .content__item__type--app-link {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    img {
+                        margin-top: 8px;
+                        margin-right: 8px;
+                        width: 120px;
+                    }
+                }
+            }
+        }
+    }
+
+    .second-footer {
+        background-color: #27343e;
+        padding: 20px 0;
+
+        .second-footer__content {
+            display: flex;
+            justify-content: space-between;
+
+            .second-footer__content__item {
+                flex-basis: 40%;
+                list-style: none;
+
+                .content__item__label {
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    color: #fff;
+                    margin-bottom: 12px;
+                }
+
+                .content__item__decs {
+                    font-size: 1.2rem;
+                    color: #fff;
+                    margin-bottom: 16px;
+                }
+
+                .content__item__certification {
+                    img {
+                        width: 108px;
+                        margin-right: 16px;
+                    }
+
+                }
+
+                .content__item__input {
+                    width: 328px;
+                    border: none;
+                    padding: 8px;
+                    border-radius: 2px;
+                    font-size: 1.4rem;
+
+                }
+
+                .content__item__input:focus {
+                    outline: 1px solid #0f62fe;
+                }
+
+                .content__item__sign-up {
+                    padding: 8px 24px;
+                    border-radius: 2px;
+                    border: none;
+                    background-color: #ee2624;
+                    color: #fff;
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                    cursor: pointer;
+                    margin-left: 2px;
+                }
+            }
+        }
+    }
+}
