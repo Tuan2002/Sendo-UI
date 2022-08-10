@@ -39,7 +39,7 @@
                     text-align: center;
 
                     @include mobileResponsive {
-                        font-size: 1.1rem;
+                        font-size: 1rem;
                     }
 
                     font-size: 1.5rem;
@@ -274,7 +274,7 @@
                 @include mobileResponsive {
                     display: flex;
                     flex-wrap: wrap;
-                    gap: 8px 12px;
+                    gap: 8px;
                 }
 
                 grid-template-columns: auto auto auto auto auto auto;
@@ -284,7 +284,7 @@
                 .recommend-product__item {
                     @include mobileResponsive {
                         width: auto;
-                        flex-basis: 48%;
+                        flex-basis: 48.8%;
                         flex-shrink: 0;
                     }
 
@@ -316,7 +316,11 @@
 
                         .product__item__product-info {
                             @include mobileResponsive {
-                                margin-bottom: 20px;
+                                margin-bottom: 16px;
+                            }
+
+                            @include mobileResponsive (375px) {
+                                margin-bottom: 30px;
                             }
 
                             margin-top: 16px;
@@ -339,6 +343,10 @@
                             }
 
                             .product-info__price {
+                                @include mobileResponsive {
+                                    font-size: 1.4rem;
+                                }
+
                                 font-size: 1.6rem;
                                 font-weight: 700;
                                 color: #0f1e29;
@@ -365,12 +373,7 @@
                         }
 
                         .product__item__seller-info {
-
-
                             padding: 0 8px;
-                            // position: relative;
-                            // bottom: 0;
-                            // left: 0;
                             margin-top: auto;
                             margin-bottom: 4px;
                             display: flex;
@@ -384,6 +387,10 @@
                         }
 
                         .product__item--deal-type {
+                            @include mobileResponsive {
+                                top: 50%;
+                            }
+
                             display: flex;
                             position: absolute;
                             top: 57%;
