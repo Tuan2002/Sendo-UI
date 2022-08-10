@@ -1,6 +1,6 @@
 @import "./_variables.scss";
 
-@mixin mobileResponsive ($width: 768px) {
+@mixin mobileResponsive ($width: 767px) {
     @media screen and (max-width: $width) {
         @content;
     }

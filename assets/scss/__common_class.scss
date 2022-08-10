@@ -61,11 +61,15 @@
 
     .item__banner {
         display: block !important;
+
+        img {
+            width: 80% !important;
+        }
     }
 
     .product__item__content {
         padding-bottom: 8px;
-        width: 186px;
+        width: 90%;
         background-color: #fff;
         border-radius: 8px;
         box-shadow: 0 2px 4px 0 rgb(0 0 0 / 12%), 0 -2px 2px 0 rgb(0 0 0 / 4%);
