@@ -1151,7 +1151,7 @@
 }
 @media screen and (max-width: 768px) {
   #content #product-container .recommend-product-container .recommend-product-list .recommend-product__item .product__item__content .product__item__product-info .product-info__price {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 }
 #content #product-container .recommend-product-container .recommend-product-list .recommend-product__item .product__item__content .product__item__product-info .product-info--price-change {
