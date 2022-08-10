@@ -7,10 +7,20 @@
         background-color: #fff;
 
         .service-list {
+            @include mobileResponsive {
+                padding: 8px 0;
+            }
+
             display: flex;
             flex-wrap: wrap;
 
             .service-item {
+                @include mobileResponsive {
+                    flex: none;
+                    padding: 8px;
+                    flex-basis: 20%;
+                }
+
                 flex: 1;
                 display: flex;
                 flex-direction: column;
@@ -27,6 +37,11 @@
                 .service-item__title {
                     margin-top: 8px;
                     text-align: center;
+
+                    @include mobileResponsive {
+                        font-size: 1.1rem;
+                    }
+
                     font-size: 1.5rem;
                     color: #000;
                     font-weight: 400;
@@ -36,6 +51,10 @@
         }
 
         .banner {
+            @include mobileResponsive {
+                margin: 16px 0;
+            }
+
             margin: 32px 0;
 
             .banner__image {
@@ -49,7 +68,17 @@
         padding-top: 8px;
         background-color: #f2f3f4;
 
+        @include mobileResponsive {
+            padding: 8px;
+        }
+
         .flash-sale-container {
+            @include mobileResponsive {
+                background-image: url(https://media3.scdn.vn/img4/2022/08_02/EvVndMMDIKEGLBQSJGqD.png), linear-gradient(to right, rgb(236, 45, 76), rgb(254, 226, 98));
+                background-size: contain;
+                padding: 10px;
+            }
+
             position: relative;
             margin: 16px auto;
             padding: 24px 16px;
@@ -93,6 +122,10 @@
                 }
 
                 .flash-sale__header__see-all {
+                    @include mobileResponsive {
+                        color: #fff;
+                    }
+
                     margin-right: 8px;
                     text-decoration: none;
                     font-size: 1.4rem;
@@ -101,25 +134,47 @@
             }
 
             .flash-sale__content {
+                @include mobileResponsive {
+                    overflow: hidden;
+                }
+
                 scroll-behavior: smooth;
                 overflow: scroll;
                 padding: 16px 0;
 
                 .flash-sale__list {
+                    @include mobileResponsive {
+                        display: flex;
+                    }
+
                     display: inline-flex;
 
                     .sale-product {
+                        @include mobileResponsive {
+                            flex-shrink: 0;
+                            flex-basis: 32%;
+                            margin-right: 10px;
+                        }
+
+                        background-color: #fff;
                         position: relative;
-                        box-shadow: 0 2px 4px 0 rgb(0 0 0 / 12%), 0 -2px 2px 0 rgb(0 0 0 / 4%);
+                        box-shadow: 0 2px 4px 0 rgb(0 0 0 / 12%),
+                        0 -2px 2px 0 rgb(0 0 0 / 4%);
                         border-radius: 8px;
                         width: 144px;
                         margin-right: 16px;
 
                         .sale-product__image {
                             width: 100%;
+                            border-radius: 8px 8px 0 0;
                         }
 
                         .sale-product__price {
+                            @include mobileResponsive {
+                                margin-top: 8px;
+                                padding: 8px;
+                            }
+
                             padding: 16px 8px;
 
                             .sale-product__price__new {
@@ -155,6 +210,11 @@
                         top: 128px;
                         left: 8px;
 
+                        @include mobileResponsive {
+                            top: 60%;
+
+                        }
+
                         img {
                             width: 70px;
                             border-radius: 4px;
@@ -169,6 +229,10 @@
 
             .flash-sale__next,
             .flash-sale__previous {
+                @include mobileResponsive {
+                    display: none;
+                }
+
                 background-color: #e7e8ea;
                 position: absolute;
                 top: 50%;
@@ -203,11 +267,20 @@
             padding: 0;
 
             .recommend-product-list {
-                display: grid;
+                @include mobileResponsive {
+                    grid-template-columns: auto auto;
+                    grid-gap: 8px;
+                }
+
                 grid-template-columns: auto auto auto auto auto auto;
+                display: grid;
                 gap: 16px 18px;
 
                 .recommend-product__item {
+                    @include mobileResponsive {
+                        width: 185px;
+                    }
+
                     position: relative;
                     display: flex;
                     flex-direction: column;
@@ -217,7 +290,8 @@
                     padding: 4px;
                     background-color: #fff;
                     border-radius: 4px;
-                    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 12%), 0 -2px 2px 0 rgb(0 0 0 / 4%);
+                    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 12%),
+                    0 -2px 2px 0 rgb(0 0 0 / 4%);
 
                     .item__banner {
                         display: none;
@@ -235,6 +309,7 @@
 
                         .product__item__product-info {
                             margin-top: 16px;
+                            margin-bottom: 16px;
                             padding: 0 8px;
                             display: flex;
                             flex-direction: column;
@@ -280,7 +355,9 @@
 
                         .product__item__seller-info {
                             padding: 0 8px;
-                            margin-top: auto;
+                            position: relative;
+                            bottom: 0;
+                            left: 0;
                             margin-bottom: 4px;
                             display: flex;
                             justify-content: space-between;
@@ -319,6 +396,10 @@
             }
 
             .product-load-more {
+                @include mobileResponsive {
+                    width: 100%;
+                }
+
                 margin-top: 24px;
                 margin-bottom: 64px;
                 margin-left: 50%;
@@ -344,10 +425,15 @@
 
         .content__footer__list {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-around;
             padding: 20px 0;
 
             .footer__list__item {
+                @include mobileResponsive {
+                    flex-basis: 50%;
+                }
+
                 flex-basis: 20%;
                 display: flex;
                 flex-direction: column;

@@ -22,6 +22,10 @@ html {
 
 #app {
     #chat-btn {
+        @include mobileResponsive {
+            right: 8px;
+        }
+
         position: fixed;
         bottom: 24px;
         right: 24px;
@@ -33,7 +37,8 @@ html {
         display: flex;
         justify-content: center;
         align-items: center;
-        box-shadow: 0 2px 4px 0 rgb(0 0 0 / 12%), 0 -2px 2px 0 rgb(0 0 0 / 4%);
+        box-shadow: 0 2px 4px 0 rgb(0 0 0 / 12%),
+        0 -2px 2px 0 rgb(0 0 0 / 4%);
         cursor: pointer;
 
         .chat-btn__content {
@@ -54,6 +59,10 @@ html {
     }
 
     #scroll-top-btn {
+        @include mobileResponsive {
+            right: 8px;
+        }
+
         position: fixed;
         bottom: 90px;
         right: 50px;

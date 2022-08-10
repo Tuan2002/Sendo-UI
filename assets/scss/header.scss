@@ -116,7 +116,70 @@
         z-index: 4;
         background-color: #ee2624;
 
+        .mobile-header__container {
+            display: none;
+            padding: 16px;
+
+            .mobile-header__banner {
+                display: flex;
+
+                .logo-phase {
+                    flex: 1;
+                    display: flex;
+                    align-items: center;
+
+                    .logo-phase__second {
+                        margin-left: 12px;
+
+                        svg {
+                            width: 87px;
+                        }
+                    }
+                }
+
+                .use-actions {
+                    flex: 1;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+
+                    .use-action__item {
+                        padding: 8px;
+                        cursor: pointer;
+                        user-select: none;
+
+                        path {
+                            fill: #fff;
+                        }
+                    }
+
+                    .use-action__item:last-child {
+                        padding-right: 0px;
+                    }
+                }
+            }
+
+            .mobile-header__search-bar {
+                width: 100%;
+                outline: none;
+                border: none;
+                border-radius: 4px;
+                padding: 12px 16px;
+                margin-top: 4px;
+                font-size: 1.4rem;
+            }
+
+            @include mobileResponsive {
+                display: block;
+            }
+        }
+
         .main-header__container {
+            @include mobileResponsive {
+                display: none;
+            }
+
+
             display: flex;
             align-items: center;
             justify-content: space-between;

@@ -11,8 +11,13 @@
 
         .first-footer__content {
             display: flex;
+            flex-wrap: wrap;
 
             .first-footer__content__item {
+                @include mobileResponsive {
+                    flex-basis: 50%;
+                }
+
                 flex-basis: 25%;
                 list-style: none;
 
@@ -52,7 +57,19 @@
             display: flex;
             justify-content: space-between;
 
+            @include mobileResponsive {
+                flex-direction: column;
+
+                :last-child {
+                    display: none;
+                }
+            }
+
             .second-footer__content__item {
+                @include mobileResponsive {
+                    text-align: center;
+                }
+
                 flex-basis: 40%;
                 list-style: none;
 
